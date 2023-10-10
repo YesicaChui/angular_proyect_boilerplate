@@ -5,6 +5,11 @@ import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { IconsModule } from './pages/icons/icons.module';
+import { FornsModule as FornsPageModule } from './pages/forns/forns.module';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+
+
 
 @NgModule({
   declarations: [
@@ -15,7 +20,10 @@ import { IconsModule } from './pages/icons/icons.module';
     MatSidenavModule,
     MatCardModule,
     MatButtonModule,
-    IconsModule
+    IconsModule,
+    FornsPageModule,
+    MatToolbarModule,
+    MatIconModule
   ],
   exports :[
     DashboardComponent
