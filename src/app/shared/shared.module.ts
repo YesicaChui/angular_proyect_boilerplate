@@ -7,11 +7,14 @@ import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatDialogModule} from '@angular/material/dialog';
+import { FullnamePipe } from './pipes/fullname.pipe';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    FullnamePipe
+  ],
   imports: [
     CommonModule
   ],
@@ -23,6 +26,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatInputModule,
     MatFormFieldModule,
     MatDialogModule,
+    FullnamePipe,
   ]
 })
 export class SharedModule { }
