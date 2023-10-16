@@ -28,7 +28,7 @@ export class UsersComponent {
   {
     id : 1,
     name: 'Karen',
-    lastName: 'Chuki',
+    lastName: 'Callisaya',
     email: 'karen@gmail'
   },
   {
