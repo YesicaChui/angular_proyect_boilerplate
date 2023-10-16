@@ -44,11 +44,12 @@ export class UsersComponent {
   openUsersDialog():void{
     this.matDialog.open(UsersDialogComponent).afterClosed().subscribe({
       next: (valor)=> {
+        console.log(valor)
+        
         console.log(`Escribiste esto ${valor}`)
         if(valor){
           this.userName = valor
         }
-
       }
     })
   }

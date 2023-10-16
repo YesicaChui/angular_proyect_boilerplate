@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-users-dialog',
@@ -10,10 +11,20 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class UsersDialogComponent {
   userForm: FormGroup
 
-  constructor(private fb: FormBuilder){
+  constructor(private fb: FormBuilder, private matDialogRef: MatDialogRef<UsersDialogComponent>) {
     this.userForm = this.fb.group({
-      name:[]
+      name: ["",[Validators.required]],
+      lastName: ["",[Validators.required]],
+      email: ['', [Validators.email,Validators.required]],
     })
+  }
+
+  onSubmit(): void {
+    if (this.userForm.invalid){
+      this.userForm.markAllAsTouched()
+    }else{
+      this.matDialogRef.close(this.userForm.value)
+    }
   }
 
 }
