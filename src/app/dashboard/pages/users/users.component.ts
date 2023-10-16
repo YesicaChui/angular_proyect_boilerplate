@@ -13,16 +13,31 @@ import { User } from './models';
 export class UsersComponent {
   userName = ''
   testUser: User = {
+    id : 1,
     name: 'Karen',
     lastName: 'Chuki',
     email: 'karen@gmail'
   }
   testUser2: User = {
+    id : 2,
     name: 'Michina',
     lastName: 'Miauuu',
     email: 'michi@gmail'
   }
-
+ users:User[]=[
+  {
+    id : 1,
+    name: 'Karen',
+    lastName: 'Chuki',
+    email: 'karen@gmail'
+  },
+  {
+    id : 2,
+    name: 'Michina',
+    lastName: 'Miauuu',
+    email: 'michi@gmail'
+  }
+ ]
   constructor(private matDialog: MatDialog) {
 
   }
