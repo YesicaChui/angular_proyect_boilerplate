@@ -65,5 +65,19 @@ export class UsersComponent {
     this.users=this.users.filter(user=>user.id!==userId)
   }
 
+  onEditUser(user:User):void{
+    console.log(user)
+    this.matDialog.open(UsersDialogComponent,{data:user}).afterClosed().subscribe({
+      next:(valor)=>{
+        if(valor){
+          const arrayNuevo=[...this.users]
+          const indiceToEdit = arrayNuevo.findIndex((elemento)=>elemento.id===user.id)
+          arrayNuevo[indiceToEdit] = {...arrayNuevo[indiceToEdit],...valor}
+          this.users=[...arrayNuevo]
+        }
+      }
+    })
+  }
+
 
 }
