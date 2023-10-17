@@ -33,7 +33,10 @@ export class UsersComponent {
   }
 
   onDelete(userId:number):void{
-    this.users=this.users.filter(user=>user.id!==userId)
+    if(confirm('Esta seguro de eliminar este registro')){
+
+      this.users=this.users.filter(user=>user.id!==userId)
+    }
   }
 
   onEditUser(user:User):void{
