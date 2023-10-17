@@ -1,26 +1,12 @@
 <!-- todo la pantalla -->
-<mat-toolbar color="primary">
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
-    (click)="drawer.toggle()">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span>Aula Virtual Yesica</span>
-</mat-toolbar>
+<app-toolbar (toogleSidebar)="drawer.toggle()" ></app-toolbar>
 <mat-drawer-container class="example-container" autosize>
   <!-- hijo1 menu lateral tambien conocido como sidenav -->
   <mat-drawer #drawer class="example-sidenav" mode="side">
-    <mat-nav-list>
-      <mat-list-item >Alumnos</mat-list-item>
-      <mat-list-item >Cursos</mat-list-item>
-      <mat-list-item >Docentes</mat-list-item>
-      <mat-list-item >Notas</mat-list-item>
-    </mat-nav-list>
-
+    <app-sidebar></app-sidebar>
   </mat-drawer>
 <!-- hijo2 el contenido  -->
   <div class="example-sidenav-content">
-
-
     <main style="padding: 20px;">
       <h1 appHeadline>Usuarios</h1>
       <app-users></app-users>
