@@ -11,7 +11,7 @@ import { FullnamePipe } from './pipes/fullname.pipe';
 import {MatTableModule} from '@angular/material/table';
 import { FormErrorsPipe } from './pipes/form-errors.pipe';
 import {MatListModule} from '@angular/material/list';
-
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -33,6 +33,7 @@ import {MatListModule} from '@angular/material/list';
     MatTableModule,
     FormErrorsPipe,
     MatListModule,
+    MatSelectModule
   ]
 })
 export class SharedModule { }

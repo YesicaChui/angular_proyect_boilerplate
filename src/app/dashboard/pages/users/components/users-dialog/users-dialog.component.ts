@@ -13,25 +13,45 @@ export class UsersDialogComponent {
   userForm: FormGroup
 
   constructor(private fb: FormBuilder, private matDialogRef: MatDialogRef<UsersDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public user?:User) {
+    @Inject(MAT_DIALOG_DATA) public user?: User) {
     this.userForm = this.fb.group({
-      name: ["",[Validators.required]],
-      lastName: ["",[Validators.required]],
-      email: ['', [Validators.email,Validators.required, Validators.minLength(3)]],
+      name: ["", [Validators.required]],
+      lastName: ["", [Validators.required]],
+      email: ['', [Validators.email, Validators.required, Validators.minLength(3)]],
+      pais: ['', [Validators.required]],
+      tipo: ['', [Validators.required]],
     })
 
-    if(this.user){
+    if (this.user) {
       this.userForm.patchValue(this.user)
     }
-    
+
   }
 
   onSubmit(): void {
-    if (this.userForm.invalid){
+    if (this.userForm.invalid) {
       this.userForm.markAllAsTouched()
-    }else{
+    } else {
       this.matDialogRef.close(this.userForm.value)
     }
   }
+
+  tipos: string[] = ['Normal', 'Semibeca', 'Becado'];
+  paises: string[] = [
+    'Perú',
+    'Argentina',
+    'Bolivia',
+    'Colombia',
+    'México',
+    'Chile',
+    'Ecuador',
+    'Uruguay',
+    'Paraguay',
+    'Venezuela',
+    'Brasil'
+  ];
+
+
+
 
 }
