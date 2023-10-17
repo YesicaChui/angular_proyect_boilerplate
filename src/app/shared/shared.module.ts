@@ -12,11 +12,13 @@ import {MatTableModule} from '@angular/material/table';
 import { FormErrorsPipe } from './pipes/form-errors.pipe';
 import {MatListModule} from '@angular/material/list';
 import {MatSelectModule} from '@angular/material/select';
+import { HeadlineDirective } from './directives/headline.directive';
 
 @NgModule({
   declarations: [
     FullnamePipe,
-    FormErrorsPipe
+    FormErrorsPipe,
+    HeadlineDirective
   ],
   imports: [
     CommonModule
@@ -33,7 +35,8 @@ import {MatSelectModule} from '@angular/material/select';
     MatTableModule,
     FormErrorsPipe,
     MatListModule,
-    MatSelectModule
+    MatSelectModule,
+    HeadlineDirective
   ]
 })
 export class SharedModule { }

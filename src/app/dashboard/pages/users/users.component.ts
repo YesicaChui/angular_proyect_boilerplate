@@ -19,12 +19,6 @@ export class UsersComponent {
   openUsersDialog(): void {
     this.matDialog.open(UsersDialogComponent).afterClosed().subscribe({
       next: (valor) => {
-        console.log(valor)
-        console.log("wilson")
-
-
-
-        console.log(`Escribiste esto ${valor}`)
         if (valor) {          
           this.users = [
             ...this.users,
@@ -41,7 +35,6 @@ export class UsersComponent {
   }
 
   onEditUser(user:User):void{
-    console.log(user)
     this.matDialog.open(UsersDialogComponent,{data:user}).afterClosed().subscribe({
       next:(valor)=>{
         if(valor){

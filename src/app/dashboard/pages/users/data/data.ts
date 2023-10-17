@@ -41,7 +41,7 @@ export const data:User[]=[
     pais: 'México',
     tipo: 'Becado'
   },
-  {
+/*  {
     id: 6,
     name: 'Ana',
     lastName: 'Gutiérrez',
@@ -104,5 +104,5 @@ export const data:User[]=[
     email: 'isabella@gmail.com',
     pais: 'Brasil',
     tipo: 'Normal'
-  },
+  },*/
 ]
