@@ -13,6 +13,7 @@ import { data } from './data/data';
 })
 export class UsersComponent {
   users: User[] = data
+  idCounter = this.users.length+1;
   constructor(private matDialog: MatDialog) {
 
   }
@@ -22,8 +23,9 @@ export class UsersComponent {
         if (valor) {          
           this.users = [
             ...this.users,
-            {...valor, id:new Date().getTime()}
+            {...valor, id:this.idCounter}
           ]
+          this.idCounter++
 
         }
       }
