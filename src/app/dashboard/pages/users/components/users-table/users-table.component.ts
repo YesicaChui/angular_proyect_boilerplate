@@ -17,5 +17,5 @@ export class UsersTableComponent {
   @Output()
   editUser = new EventEmitter<User>()
 
-  displayedColumns = [ 'id','fullName', 'email','actions']
+  displayedColumns = [ 'id','fullName', 'email','pais','tipo','actions']
 }

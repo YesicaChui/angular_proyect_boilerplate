@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
 import { UsersDialogComponent } from './components/users-dialog/users-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
 import { User } from './models';
+import { data } from './data/data';
 
 @Component({
   selector: 'app-users',
@@ -11,33 +12,7 @@ import { User } from './models';
   styleUrls: ['./users.component.scss']
 })
 export class UsersComponent {
-  userName = ''
-  testUser: User = {
-    id: 1,
-    name: 'Karen',
-    lastName: 'Chuki',
-    email: 'karen@gmail'
-  }
-  testUser2: User = {
-    id: 2,
-    name: 'Michina',
-    lastName: 'Miauuu',
-    email: 'michi@gmail'
-  }
-  users: User[] = [
-    {
-      id: 1,
-      name: 'Karen',
-      lastName: 'Callisaya',
-      email: 'karen@gmail'
-    },
-    {
-      id: 2,
-      name: 'Michina',
-      lastName: 'Miauuu',
-      email: 'michi@gmail'
-    }
-  ]
+  users: User[] = data
   constructor(private matDialog: MatDialog) {
 
   }
