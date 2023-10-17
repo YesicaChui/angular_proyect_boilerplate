@@ -7,9 +7,7 @@ import { ValidationErrors } from '@angular/forms';
 export class FormErrorsPipe implements PipeTransform {
 
   transform(value: ValidationErrors| null | undefined, ...args: unknown[]): unknown {
-    console.log(value)
     if (!value) return ''
-
     const errorMessages: string[] = []
     if('required' in value){
       errorMessages.push('Este campo es requerido')
@@ -20,10 +18,6 @@ export class FormErrorsPipe implements PipeTransform {
     if('minlength' in value){
       errorMessages.push('El largo minimo es ' + value['minlength'].requiredLength)
     }
-
-
-
-    console.log(value)
     return errorMessages.join('. ');
   }
 

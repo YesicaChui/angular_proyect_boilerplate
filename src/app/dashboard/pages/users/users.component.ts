@@ -13,45 +13,57 @@ import { User } from './models';
 export class UsersComponent {
   userName = ''
   testUser: User = {
-    id : 1,
+    id: 1,
     name: 'Karen',
     lastName: 'Chuki',
     email: 'karen@gmail'
   }
   testUser2: User = {
-    id : 2,
+    id: 2,
     name: 'Michina',
     lastName: 'Miauuu',
     email: 'michi@gmail'
   }
- users:User[]=[
-  {
-    id : 1,
-    name: 'Karen',
-    lastName: 'Callisaya',
-    email: 'karen@gmail'
-  },
-  {
-    id : 2,
-    name: 'Michina',
-    lastName: 'Miauuu',
-    email: 'michi@gmail'
-  }
- ]
+  users: User[] = [
+    {
+      id: 1,
+      name: 'Karen',
+      lastName: 'Callisaya',
+      email: 'karen@gmail'
+    },
+    {
+      id: 2,
+      name: 'Michina',
+      lastName: 'Miauuu',
+      email: 'michi@gmail'
+    }
+  ]
   constructor(private matDialog: MatDialog) {
 
   }
-  openUsersDialog():void{
+  openUsersDialog(): void {
     this.matDialog.open(UsersDialogComponent).afterClosed().subscribe({
-      next: (valor)=> {
+      next: (valor) => {
         console.log(valor)
-        
+        console.log("wilson")
+
+
+
         console.log(`Escribiste esto ${valor}`)
-        if(valor){
-          this.userName = valor
+        if (valor) {          
+          this.users = [
+            ...this.users,
+            {...valor, id:new Date().getTime()}
+          ]
+
         }
       }
     })
   }
+
+  onDelete(userId:number):void{
+    this.users=this.users.filter(user=>user.id!==userId)
+  }
+
 
 }
