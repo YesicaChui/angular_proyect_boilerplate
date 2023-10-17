@@ -10,7 +10,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { FullnamePipe } from './pipes/fullname.pipe';
 import {MatTableModule} from '@angular/material/table';
 import { FormErrorsPipe } from './pipes/form-errors.pipe';
-
+import {MatListModule} from '@angular/material/list';
 
 
 @NgModule({
@@ -32,6 +32,7 @@ import { FormErrorsPipe } from './pipes/form-errors.pipe';
     FullnamePipe,
     MatTableModule,
     FormErrorsPipe,
+    MatListModule,
   ]
 })
 export class SharedModule { }

@@ -1,23 +1,25 @@
 <!-- todo la pantalla -->
-
+<mat-toolbar color="primary">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+    (click)="drawer.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Aula Virtual Yesica</span>
+</mat-toolbar>
 <mat-drawer-container class="example-container" autosize>
   <!-- hijo1 menu lateral tambien conocido como sidenav -->
   <mat-drawer #drawer class="example-sidenav" mode="side">
-    <p>Auto-resizing sidenav</p>
-    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
-    <button (click)="showFiller = !showFiller" mat-raised-button>
-      Toggle extra text
-    </button>
+    <mat-nav-list>
+      <mat-list-item >Alumnos</mat-list-item>
+      <mat-list-item >Cursos</mat-list-item>
+      <mat-list-item >Docentes</mat-list-item>
+      <mat-list-item >Notas</mat-list-item>
+    </mat-nav-list>
+
   </mat-drawer>
 <!-- hijo2 el contenido  -->
   <div class="example-sidenav-content">
-    <mat-toolbar color="primary">
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
-        (click)="drawer.toggle()">
-        <mat-icon>menu</mat-icon>
-      </button>
-      <span>Aula Virtual Yesica</span>
-    </mat-toolbar>
+
     <!-- <app-icons></app-icons> -->
     <main style="padding: 20px;">
       <!-- <app-forns></app-forns> -->
