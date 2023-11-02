@@ -31,6 +31,7 @@ export class UsersDialogComponent {
     private usersService: UsersService,
     @Inject(MAT_DIALOG_DATA) private userId?: number
   ) {
+    console.log(userId)
     if (userId) {
       this.usersService.getUserById$(userId).subscribe({
         next: (c) => {

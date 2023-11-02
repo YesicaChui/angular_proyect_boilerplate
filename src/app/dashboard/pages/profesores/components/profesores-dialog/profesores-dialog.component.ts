@@ -29,6 +29,7 @@ export class ProfesoresDialogComponent {
     private profesoresService: ProfesoresService,
     @Inject(MAT_DIALOG_DATA) private profesorId?: number
   ) {
+    console.log(profesorId)
     if (profesorId) {
       this.profesoresService.getProfesorById$(profesorId).subscribe({
         next: (c) => {
