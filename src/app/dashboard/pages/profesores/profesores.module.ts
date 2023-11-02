@@ -4,7 +4,7 @@ import { ProfesoresComponent } from './profesores.component';
 import { ProfesoresDialogComponent } from './components/profesores-dialog/profesores-dialog.component';
 import { ProfesoresTableComponent } from './components/profesores-table/profesores-table.component';
 import { ProfesoresDetailComponent } from './components/profesores-detail/profesores-detail.component';
-import { SharedModule } from 'src/app/shared/shared.module';
+import { SharedModule } from '../../../shared/shared.module';
 import { RouterModule } from '@angular/router';
 
 

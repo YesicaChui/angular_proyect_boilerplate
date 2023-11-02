@@ -19,6 +19,8 @@ export class CoursesService {
     },
   ];
 
+  idCounter = this.courses.length+1;
+
   getCourses$(): Observable<Course[]> {
     return of(this.courses);
   }
@@ -41,5 +43,10 @@ export class CoursesService {
 
   getCourseById$(id: number): Observable<Course | undefined> {
     return of(this.courses.find((c) => c.id === id));
+  }
+  createId(){
+    const newId= this.idCounter;
+    this.idCounter++
+    return newId
   }
 }

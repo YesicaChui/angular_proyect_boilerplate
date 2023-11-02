@@ -25,6 +25,8 @@ export class ProfesoresService {
 
   ];
 
+  idCounter = this.profesores.length+1;
+
   getProfesores$(): Observable<Profesor[]> {
     return of(this.profesores);
   }
@@ -48,4 +50,11 @@ export class ProfesoresService {
   getProfesorById$(id: number): Observable<Profesor | undefined> {
     return of(this.profesores.find((c) => c.id === id));
   }
+
+  createId(){
+    const newId= this.idCounter;
+    this.idCounter++
+    return newId
+  }
+
 }

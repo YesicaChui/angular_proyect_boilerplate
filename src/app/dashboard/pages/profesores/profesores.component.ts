@@ -28,7 +28,7 @@ export class ProfesoresComponent {
         next: (result) => {
           if (result) {
             this.profesores$ = this.profesoresService.createProfesor$({
-              id: new Date().getTime(),
+              id: this.profesoresService.createId(),
               name: result.name,
               lastName: result.lastName,
               email: result.email,
