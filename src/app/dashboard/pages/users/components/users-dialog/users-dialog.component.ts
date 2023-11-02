@@ -11,9 +11,9 @@ import { UsersService } from '../../users.service';
   ]
 })
 export class UsersDialogComponent {
-  nameControl = new FormControl();
-  lastNameControl = new FormControl();
-  emailControl = new FormControl();
+  nameControl = new FormControl("", [Validators.required]);
+  lastNameControl = new FormControl("", [Validators.required]);
+  emailControl = new FormControl('', [Validators.email, Validators.required, Validators.minLength(3)]);
   paisControl = new FormControl();
   tipoControl = new FormControl();
   

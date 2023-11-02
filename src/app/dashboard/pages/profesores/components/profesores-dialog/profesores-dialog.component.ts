@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { ProfesoresService } from '../../profesores.service';
 
@@ -9,9 +9,9 @@ import { ProfesoresService } from '../../profesores.service';
   styleUrls: ['./profesores-dialog.component.scss']
 })
 export class ProfesoresDialogComponent {
-  nameControl = new FormControl();
-  lastNameControl = new FormControl();
-  emailControl = new FormControl();
+  nameControl = new FormControl("", [Validators.required]);
+  lastNameControl = new FormControl("", [Validators.required]);
+  emailControl = new FormControl('', [Validators.email, Validators.required, Validators.minLength(3)]);
   especialidadControl = new FormControl();
   tipoControl = new FormControl();
   
