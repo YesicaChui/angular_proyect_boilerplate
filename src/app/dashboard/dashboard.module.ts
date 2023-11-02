@@ -7,6 +7,7 @@ import { UsersModule } from './pages/users/users.module';
 import { SharedModule } from '../shared/shared.module';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -21,7 +22,8 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
     MatSidenavModule,
     MatToolbarModule,
     UsersModule,
-    SharedModule
+    SharedModule,
+    RouterModule
   ],
   exports :[
     DashboardComponent
