@@ -1,1 +1,13 @@
-<p>profesores works!</p>
+<h1>Profesores</h1>
+
+<div class="d-flex justify-content-end mb-3">
+  <button (click)="addProfesor()" mat-flat-button color="primary">
+    Agregar Profesor
+  </button>
+</div>
+
+<app-profesores-table
+  [dataSource]="(profesores$ | async) || []"
+  (deleteProfesor)="onDeleteProfesor($event)"
+  (editProfesor)="onEditProfesor($event)"
+></app-profesores-table>
