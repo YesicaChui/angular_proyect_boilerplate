@@ -9,6 +9,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { RouterModule } from '@angular/router';
 import { CoursesModule } from './pages/courses/courses.module';
+import { ProfesoresModule } from './pages/profesores/profesores.module';
 
 
 
@@ -26,6 +27,7 @@ import { CoursesModule } from './pages/courses/courses.module';
     SharedModule,
     RouterModule,
     CoursesModule,
+    ProfesoresModule
   ],
   exports :[
     DashboardComponent
