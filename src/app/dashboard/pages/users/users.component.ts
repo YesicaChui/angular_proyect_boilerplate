@@ -5,6 +5,8 @@ import { UsersDialogComponent } from './components/users-dialog/users-dialog.com
 import { MatDialog } from '@angular/material/dialog';
 import { User } from './models';
 import { data } from './data/data';
+import { Observable } from 'rxjs';
+import { UsersService } from './users.service';
 
 @Component({
   selector: 'app-users',
@@ -12,6 +14,56 @@ import { data } from './data/data';
   styleUrls: ['./users.component.scss']
 })
 export class UsersComponent {
+
+  users$: Observable<User[]>;
+
+  constructor(
+    private usersService: UsersService,
+    private matDialog: MatDialog
+  ) {
+    this.users$ = this.usersService.getUsers$();
+  }
+
+  addUser(): void {
+    this.matDialog
+      .open(UsersDialogComponent)
+      .afterClosed()
+      .subscribe({
+        next: (result) => {
+          if (result) {
+            this.users$ = this.usersService.createUser$({
+              id: this.usersService.createId(),
+              name: result.name,
+              lastName: result.lastName,
+              email: result.email,
+              pais: result.pais,
+              tipo: result.tipo,
+            });
+          }
+        },
+      });
+  }
+
+  onDeleteUser(userId: number): void {
+    this.users$ = this.usersService.deleteUser$(userId);
+  }
+
+  onEditUser(userId: number): void {
+    this.matDialog
+      .open(UsersDialogComponent, {
+        data: userId,
+      })
+      .afterClosed()
+      .subscribe({
+        next: (result) => {
+          if (!!result) {
+            this.users$ = this.usersService.editUser$(userId, result);
+          }
+        },
+      });
+  }
+
+  /*
   users: User[] = data
   idCounter = this.users.length+1;
   constructor(private matDialog: MatDialog) {
@@ -52,5 +104,5 @@ export class UsersComponent {
     })
   }
 
-
+*/
 }

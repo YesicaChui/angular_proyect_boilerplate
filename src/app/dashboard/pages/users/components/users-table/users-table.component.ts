@@ -12,10 +12,10 @@ export class UsersTableComponent {
   dataSource: User[] = [ ]
 
   @Output()
-  deleteUser = new EventEmitter<number>()
+  deleteUser = new EventEmitter()
 
   @Output()
-  editUser = new EventEmitter<User>()
+  editUser = new EventEmitter()
 
   displayedColumns = [ 'id','fullName', 'email','pais','tipo','actions']
 }
