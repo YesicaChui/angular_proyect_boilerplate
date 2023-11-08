@@ -10,6 +10,7 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { RouterModule } from '@angular/router';
 import { CoursesModule } from './pages/courses/courses.module';
 import { ProfesoresModule } from './pages/profesores/profesores.module';
+import { DashboardRoutingModule } from './dashboard-routing.module';
 
 
 
@@ -25,7 +26,7 @@ import { ProfesoresModule } from './pages/profesores/profesores.module';
     MatToolbarModule,
     UsersModule,
     SharedModule,
-    RouterModule,
+    DashboardRoutingModule,
     CoursesModule,
     ProfesoresModule
   ],

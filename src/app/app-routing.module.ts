@@ -9,22 +9,23 @@ import { ProfesoresComponent } from './dashboard/pages/profesores/profesores.com
 const routes: Routes = [
   {
     path:'dashboard',
-    component: DashboardComponent,
-    children:[
-      {
-        path:'users',
-        component:UsersComponent
-      },
-      {
-        path:'cursos',
-        component:CoursesComponent
-      },
-      {
-        path:'profesores',
-        component:ProfesoresComponent
-      },
+    loadChildren:()=>import('./dashboard/dashboard.module').then(result=>result.DashboardModule)
+    // component: DashboardComponent,
+    // children:[
+    //   {
+    //     path:'users',
+    //     component:UsersComponent
+    //   },
+    //   {
+    //     path:'cursos',
+    //     component:CoursesComponent
+    //   },
+    //   {
+    //     path:'profesores',
+    //     component:ProfesoresComponent
+    //   },
 
-    ]
+    // ]
   },
   {
     path: 'auth',
