@@ -24,11 +24,11 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
     CommonModule,
     MatSidenavModule,
     MatToolbarModule,
-    UsersModule,
+    // UsersModule,
     SharedModule,
     DashboardRoutingModule,
-    CoursesModule,
-    ProfesoresModule
+    // CoursesModule,
+    // ProfesoresModule
   ],
   exports :[
     DashboardComponent

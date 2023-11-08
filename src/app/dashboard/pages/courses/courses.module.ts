@@ -6,6 +6,7 @@ import { CoursesTableComponent } from './components/courses-table/courses-table.
 import { CoursesDialogComponent } from './components/courses-dialog/courses-dialog.component';
 import {SharedModule} from '../../../shared/shared.module'
 import { RouterModule } from '@angular/router';
+import { CoursesRoutingModule } from './courses-routing.module';
 
 
 @NgModule({
@@ -16,7 +17,7 @@ import { RouterModule } from '@angular/router';
     CoursesDialogComponent,
   ],
   imports: [
-    CommonModule,SharedModule,RouterModule
+    CommonModule,SharedModule,CoursesRoutingModule
   ]
 })
 export class CoursesModule { }

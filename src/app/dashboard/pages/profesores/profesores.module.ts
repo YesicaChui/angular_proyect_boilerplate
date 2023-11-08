@@ -6,6 +6,7 @@ import { ProfesoresTableComponent } from './components/profesores-table/profesor
 import { ProfesoresDetailComponent } from './components/profesores-detail/profesores-detail.component';
 import { SharedModule } from '../../../shared/shared.module';
 import { RouterModule } from '@angular/router';
+import { ProfesoresRoutingModule } from './profesores-routing.module';
 
 
 
@@ -17,7 +18,7 @@ import { RouterModule } from '@angular/router';
     ProfesoresDetailComponent
   ],
   imports: [
-    CommonModule, SharedModule,RouterModule
+    CommonModule, SharedModule,ProfesoresRoutingModule
   ]
 })
 export class ProfesoresModule { }

@@ -12,15 +12,19 @@ const routes: Routes = [
     children:[
       {
         path:'users',
-        component:UsersComponent
+        loadChildren:()=>import('./pages/users/users.module').then(result=>result.UsersModule)
+
+        // component:UsersComponent
       },
       {
         path:'cursos',
-        component:CoursesComponent
+        loadChildren:()=>import('./pages/courses/courses.module').then(result=>result.CoursesModule)
+        // component:CoursesComponent
       },
       {
         path:'profesores',
-        component:ProfesoresComponent
+        loadChildren:()=>import('./pages/profesores/profesores.module').then(result=>result.ProfesoresModule)
+        // component:ProfesoresComponent
       },
 
     ]
