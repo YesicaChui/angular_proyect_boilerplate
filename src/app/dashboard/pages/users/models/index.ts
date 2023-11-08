@@ -5,4 +5,7 @@ export interface User {
   email: string
   pais?:string
   tipo?:string
+  token: string;
+  role?: string;
+  password?: string;
 }

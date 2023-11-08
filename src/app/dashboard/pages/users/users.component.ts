@@ -38,6 +38,9 @@ export class UsersComponent {
               email: result.email,
               pais: result.pais,
               tipo: result.tipo,
+              token: "asdfdggzzzzzzz",
+              role: 'Admin',
+              password: '123456',
             });
           }
         },

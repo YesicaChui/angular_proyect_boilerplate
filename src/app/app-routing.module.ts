@@ -5,10 +5,12 @@ import { UsersComponent } from './dashboard/pages/users/users.component';
 import { AuthComponent } from './auth/auth.component';
 import { CoursesComponent } from './dashboard/pages/courses/courses.component';
 import { ProfesoresComponent } from './dashboard/pages/profesores/profesores.component';
+import { dashboardGuard } from './core/guards/dashboard.guard';
 
 const routes: Routes = [
   {
     path:'dashboard',
+    canActivate: [dashboardGuard],
     loadChildren:()=>import('./dashboard/dashboard.module').then(result=>result.DashboardModule)
     // component: DashboardComponent,
     // children:[
@@ -29,7 +31,9 @@ const routes: Routes = [
   },
   {
     path: 'auth',
-    component: AuthComponent
+    loadChildren:()=>import('./auth/auth.module').then(result=>result.AuthModule)
+
+    // component: AuthComponent
   },
   {
     path:'**',

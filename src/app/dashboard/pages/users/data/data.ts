@@ -7,7 +7,10 @@ export const data:User[]=[
     lastName: 'Callisaya',
     email: 'karen@gmail.com',
     pais:'Perú',
-    tipo:'Becado'
+    tipo:'Becado',
+    token: "asdfdgghhhhhh",
+    role: 'Admin',
+    password: '123456',
   },
   {
     id: 2,
@@ -15,7 +18,10 @@ export const data:User[]=[
     lastName: 'Chui',
     email: 'yesica@gmail.com',
     pais:'Argentina',
-    tipo:'Normal'
+    tipo:'Normal',
+    token: "asdfdggeeeeeee",
+    role: 'Admin',
+    password: '123456',
   },
   {
     id: 3,
@@ -23,7 +29,10 @@ export const data:User[]=[
     lastName: 'Vasquez',
     email: 'carlos@gmail.com',
     pais:'Bolivia',
-    tipo:'Semibeca'
+    tipo:'Semibeca',
+    token: "asdfdggaaaaaaaa",
+    role: 'Admin',
+    password: '123456',
   },
   {
     id: 4,
@@ -31,7 +40,10 @@ export const data:User[]=[
     lastName: 'Martínez',
     email: 'laura@gmail.com',
     pais: 'Colombia',
-    tipo: 'Normal'
+    tipo: 'Normal',
+    token: "asdfdggbbbbb",
+    role: 'Admin',
+    password: '123456',
   },
   {
     id: 5,
@@ -39,7 +51,10 @@ export const data:User[]=[
     lastName: 'Hernández',
     email: 'diego@gmail.com',
     pais: 'México',
-    tipo: 'Becado'
+    tipo: 'Becado',
+    token: "asdfdggcccccc",
+    role: 'Admin',
+    password: '123456',
   },
 /*  {
     id: 6,

@@ -1,0 +1,38 @@
+{
+  "users": [
+    {
+      "name": "admin",
+      "lastName": "admin",
+      "email": "admin@mail.com",
+      "password": "123456",
+      "token": "jgfdsSfvcdskjdsfDSF435324ikdsad",
+      "role": "ADMIN",
+      "id": 1
+    },
+    {
+      "name": "Yesica",
+      "lastName": "Chui",
+      "email": "yesica@mail.com",
+      "password": "123456",
+      "token": "gfldkgldfgjhfdjgndfsadasdasdasdas1",
+      "role": "ADMIN",
+      "id": 2
+    },
+    {
+      "name": "Karen",
+      "lastName": "Callisaya",
+      "email": "karen@mail.com",
+      "password": "123456",
+      "token": "dfghdfgdfgdf",
+      "role": "ADMIN",
+      "id": 3
+    },
+    {
+      "name": "probando",
+      "lastName": "prueba",
+      "email": "prueba@gmail.com",
+      "id": 4
+    }
+  ],
+  "courses": []
+}
